@@ -41,6 +41,11 @@ Route::get('/', function(){
     return view('view_admin.dashboard');
     })->middleware('auth')->name('view.option');
 
+Route::get('/home', function(){
+    return view('view_admin.dashboard');
+    })->middleware('auth')->name('view.option');
+
+
 Route::get('/crap', [\App\Http\Controllers\AppController::class, 'crapCharacter'])->name('crapCharacter');
 Route::get('/character', [\App\Http\Controllers\AppController::class, 'showCharacter'])->name('characters.show');
 Route::get('/episode', [\App\Http\Controllers\AppController::class, 'showEpisode'])->name('episodes.show');
